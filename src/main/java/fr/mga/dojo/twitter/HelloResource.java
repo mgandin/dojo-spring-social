@@ -17,8 +17,8 @@ public class HelloResource {
         this.twitterRepository = twitterRepository;
     }
 
-	@RequestMapping("/hello")
-    public String greeting(@RequestParam(value="name", defaultValue="World") String name) {
+	@RequestMapping("/description")
+    public String description(@RequestParam(value="name", defaultValue="World") String name) {
         return "{\"description\": " + twitterRepository.findDescription(Arrays.asList(name)) + "}";
     }
 }
